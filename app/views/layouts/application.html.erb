@@ -13,6 +13,9 @@
   <body>
     <nav>
       <a href="/">Bulletin Board</a>
+      <% if user_signed_in? %>
+        | <a href="/users/sign_out" data-turbo-method="delete">Sign out</a>
+      <% end %>
     </nav>
 
     <hr>
